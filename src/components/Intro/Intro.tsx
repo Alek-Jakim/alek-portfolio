@@ -27,7 +27,6 @@ const Intro = () => {
 
                 <Scroll />
 
-
             </div>
             <div className={styles["i-right"]}>
                 <div className={styles["i-bg"]}></div>
