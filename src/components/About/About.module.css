@@ -1,5 +1,6 @@
 .a {
     display: flex;
+    height: 100vh;
     background-color: var(--primary-black);
     overflow: hidden;
 }
@@ -117,6 +118,7 @@
 @media screen and (max-width: 480px) {
     .a {
         flex-direction: column;
+        height: initial;
     }
 
     .a-title-top, .a-title-bottom {

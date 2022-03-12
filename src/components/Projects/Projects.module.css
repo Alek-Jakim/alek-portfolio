@@ -1,0 +1,38 @@
+.p {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.p-wrapper {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex: 1;
+    margin: 20px auto;
+}
+
+.p-title {
+    font-size: 60px;
+}
+
+.p-divide {
+    border: 1px dotted #fff;
+    width: 60%;
+    margin: 30px auto;
+}
+
+.p-text {
+    font-size: 30px;
+}
+
+
+.p-project-wrap {
+    background-color: rgb(204, 204, 204);
+    width: 100%;
+flex: 1;
+}
