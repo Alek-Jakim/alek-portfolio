@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Martial Planet",
+        "stack": "Next.js, Markdown, Tailwind",
+        "desc": "Static Blog Website with articles related to martial arts.",
+        "projectLink": "https://markdown-blog-next-alek-jakim.vercel.app/"
+    },
+    {
+        "id": 2,
+        "title": "DJ Events",
+        "stack": "Vue.js",
+        "desc": "A memory game made with Vue, some sound effects and Game of Thrones images",
+        "projectLink": "https://djevents-aleksandar.vercel.app"
+    },
+    {
+        "id": 3,
+        "title": "The Pizza Project",
+        "stack": "mern",
+        "desc": "project description...",
+        "projectLink": ""
+    },
+    {
+        "id": 4,
+        "title": "Memory Game",
+        "stack": "Vue.js",
+        "desc": "A memory game made with Vue, some sound effects and Game of Thrones images.",
+        "projectLink": ""
+    },
+    {
+        "id": 5,
+        "title": "Benuta Landing Page",
+        "stack": "JavaScript, HTML, CSS",
+        "desc": "A simple landing page I made for Benuta, a company that sells rugs and home accessories",
+        "projectLink": "https://landing-page-benuta.netlify.app/"
+    },
+    {
+        "id": 6,
+        "title": "Portfolio Website",
+        "stack": "HTML, CSS, SASS, JavaScript",
+        "desc": "A portfolio website to showcase a developer's skillset.",
+        "projectLink": "https://aleksandar-jakimovski.netlify.app"
+    }
+]
