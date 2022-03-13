@@ -21,6 +21,10 @@ html, body {
     --light-green: #59b256;
 }
 
+::placeholder {
+  color: #fff;
+}
+
 @media screen and (max-width: 480px) {
   .main-container {
     width: 100vw;

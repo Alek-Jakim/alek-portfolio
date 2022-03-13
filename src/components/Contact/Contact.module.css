@@ -1,0 +1,178 @@
+.c {
+    height: 100vh;
+    display: flex;
+    background-color: var(--primary-black);
+}
+
+.c-left, .c-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+.c-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    flex: 2;
+}
+
+.c-contact-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95%;
+}
+
+.c-title, .c-right-title {
+    font-size: 80px;
+    color: var(--light-green);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-icon {
+    color: var(--light-green);
+    font-size: 60px;
+    margin-right: 30px;
+}
+
+.c-contact-info {
+    color: #fff;
+    font-size: 25px;
+}
+
+.c-right-title {
+    font-size: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+.c-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex: 2;
+}
+
+.c-form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.c-input {
+    margin: 10px auto;
+    padding: 10px 15px;
+}
+
+.c-input-text {
+    resize: none;
+    height: 200px;
+}
+
+.c-input, .c-input-text {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid var(--light-green);
+    background: transparent;
+    font-size: 20px;
+}
+
+
+
+.c-btn {
+    width: 40%;
+    padding: 10px;
+    font-size: 19px;
+    margin-top: 30px;
+    background-color: var(--light-green);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.c-btn:active {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .c {
+        flex-direction: column;
+        height: initial;
+    }
+
+    .c-left {
+        margin: 30px auto;
+    }
+
+    .c-contact-row {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .c-title, .c-title {
+        font-size: 40px;
+        margin: 20px auto;
+    }
+
+    .c-right-title {
+        font-size: 40px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .c-icon {
+        font-size: 30px;
+    }
+
+    .c-contact-info {
+        font-size: 20px;
+    }
+    
+    .c-contact {
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left:30px;
+    }
+
+    .c-form {
+        width: 95%;
+    }
+
+    .c-input-text, .c-input {
+        padding: 5px 10px;
+        font-size: 17px;
+    }
+
+    .c-btn {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+}
