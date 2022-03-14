@@ -94,6 +94,23 @@
     top: 0;
     right: 0;
   }
+
+
+
+.i-scroll-link {
+  color: #000;
+  font-size: 40px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+
+
+
   
   @media screen and (max-width: 480px) {
     .i {
@@ -124,4 +141,5 @@
     .i-title-item {
       font-size: 35px;
       text-align: center;    }
+
   }

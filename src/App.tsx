@@ -10,6 +10,7 @@ import Contact from "./components/Contact/Contact"
 function App() {
   return (
     <div>
+
       <Intro />
 
       <About />

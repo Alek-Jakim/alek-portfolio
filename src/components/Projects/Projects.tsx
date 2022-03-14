@@ -11,7 +11,7 @@ import "swiper/css/autoplay"
 
 const Projects = () => {
     return (
-        <div className={styles["p"]}>
+        <div className={styles["p"]} id="projects">
             <div className={styles["p-wrapper"]}>
                 <h2 className={styles["p-title"]}>My Projects</h2>
                 <div className={styles["p-divide"]}></div>
@@ -24,8 +24,8 @@ const Projects = () => {
                     spaceBetween={50}
                     slidesPerView={1}
                     // navigation={{ currentClass: styles.pagination }}
-                    autoplay={{ delay: 1500, pauseOnMouseEnter: true, disableOnInteraction: false }}
-                    speed={1500}
+                    autoplay={{ delay: 500, pauseOnMouseEnter: true, disableOnInteraction: false }}
+                    speed={2000}
                     className={styles["p-swiper"]}
                 >
                     {

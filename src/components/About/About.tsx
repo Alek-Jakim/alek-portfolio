@@ -2,13 +2,17 @@ import React from "react"
 import styles from "./About.module.css"
 import about from "../../img/about-g.jpg"
 import { SiMongodb, SiMysql, SiCss3, SiHtml5, SiNodedotjs, SiReact, SiNextdotjs, SiJavascript, SiGit } from "react-icons/si"
+import { Link } from "react-scroll"
+import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from "react-icons/bs"
 
 const About = () => {
     return (
-        <div className={styles["a"]}>
+        <div className={styles["a"]} id="about">
             <div className={styles["a-left"]}>
                 <img src={about} alt="about" className={styles["a-img"]} />
             </div>
+
+
             <div className={styles["a-right"]}>
                 <div className={styles["a-right-top"]}>
                     <h2 className={styles["a-title-top"]}>About Me</h2>

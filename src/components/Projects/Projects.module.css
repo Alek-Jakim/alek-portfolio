@@ -60,6 +60,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: grab;
+}
+
+
+.p-project-slide .card:active {
+    cursor: grabbing;
 }
 
 .p-project-slide .card .layer {

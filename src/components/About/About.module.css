@@ -115,6 +115,27 @@
 }
 
 
+.a-link-container {
+    color: var(--light-green);
+    font-size: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 140%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a-scroll-link-icon{
+    margin: 10px auto;
+}
+
+
+
+
+
 @media screen and (max-width: 480px) {
     .a {
         flex-direction: column;

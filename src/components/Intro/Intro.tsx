@@ -1,11 +1,12 @@
 import React from "react"
 import styles from "./Intro.module.css"
 import me from "../../img/me.png"
-import Scroll from "../Scroll/Scroll"
+import { Link } from "react-scroll"
+import { BsFillArrowDownCircleFill } from "react-icons/bs"
 
 const Intro = () => {
     return (
-        <div className={styles["i"]}>
+        <div className={styles["i"]} id="intro">
             <div className={styles["i-left"]}>
                 <div className={styles["i-left-wrapper"]}>
                     <h2 className={styles["i-intro"]}>Hello, My name is</h2>
@@ -25,7 +26,6 @@ const Intro = () => {
                     </p>
                 </div>
 
-                <Scroll />
 
             </div>
             <div className={styles["i-right"]}>
