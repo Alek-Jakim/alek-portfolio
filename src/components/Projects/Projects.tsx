@@ -3,6 +3,7 @@ import styles from "./Projects.module.css"
 import data from "../../data/projects.json"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper";
+import { generateIcon } from "../../utils/generateIcon"
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay"
@@ -23,16 +24,31 @@ const Projects = () => {
                     spaceBetween={50}
                     slidesPerView={1}
                     // navigation={{ currentClass: styles.pagination }}
-                    autoplay={{ delay: 2000, pauseOnMouseEnter: false, disableOnInteraction: false }}
-                    speed={2000}
+                    autoplay={{ delay: 1500, pauseOnMouseEnter: true, disableOnInteraction: false }}
+                    speed={1500}
                     className={styles["p-swiper"]}
                 >
                     {
                         data && data.map((project, idx) => (
                             <SwiperSlide key={idx} className={styles["p-project-slide"]}>
-                                <div className={styles["p-project-card"]}>
-                                    <h3>{project.title}</h3>
-                                </div>
+                                <a href={project.projectLink} style={{ color: "#fff", textDecoration: "none" }}>
+                                    <div className={styles["p-project-card"]}>
+                                        <div className={styles["card"]}>
+                                            <div className={styles["layer"]}>
+
+                                            </div>
+                                            <div className={styles["content"]}>
+                                                <p>{project.desc}</p>
+                                                <div className={styles["icon"]}>
+                                                    {generateIcon(project.icon)}
+                                                </div>
+                                                <div className={styles["details"]}>
+                                                    <h2> {project.title} <br /> <span>{project.stack}</span></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </SwiperSlide>
                         ))
                     }

@@ -4,41 +4,47 @@
         "title": "Martial Planet",
         "stack": "Next.js, Markdown, Tailwind",
         "desc": "Static Blog Website with articles related to martial arts.",
-        "projectLink": "https://markdown-blog-next-alek-jakim.vercel.app/"
+        "projectLink": "https://markdown-blog-next-alek-jakim.vercel.app/",
+        "icon": "ninja"
     },
     {
         "id": 2,
         "title": "DJ Events",
-        "stack": "Vue.js",
-        "desc": "A memory game made with Vue, some sound effects and Game of Thrones images",
-        "projectLink": "https://djevents-aleksandar.vercel.app"
+        "stack": "Next.js, Strapi",
+        "desc": "Stay in touch with the latest musical events in your area through this app.",
+        "projectLink": "https://djevents-aleksandar.vercel.app",
+        "icon": "music"
     },
     {
         "id": 3,
         "title": "The Pizza Project",
-        "stack": "mern",
-        "desc": "project description...",
-        "projectLink": ""
+        "stack": "React",
+        "desc": "A custom pizza website with plenty of delicious recipes.",
+        "projectLink": "https://the-pizza-project.herokuapp.com/",
+        "icon": "pizza"
     },
     {
         "id": 4,
         "title": "Memory Game",
         "stack": "Vue.js",
         "desc": "A memory game made with Vue, some sound effects and Game of Thrones images.",
-        "projectLink": ""
+        "projectLink": "",
+        "icon": "memory"
     },
     {
         "id": 5,
         "title": "Benuta Landing Page",
         "stack": "JavaScript, HTML, CSS",
         "desc": "A simple landing page I made for Benuta, a company that sells rugs and home accessories",
-        "projectLink": "https://landing-page-benuta.netlify.app/"
+        "projectLink": "https://landing-page-benuta.netlify.app/",
+        "icon": "style"
     },
     {
         "id": 6,
         "title": "Portfolio Website",
         "stack": "HTML, CSS, SASS, JavaScript",
         "desc": "A portfolio website to showcase a developer's skillset.",
-        "projectLink": "https://aleksandar-jakimovski.netlify.app"
+        "projectLink": "https://aleksandar-jakimovski.netlify.app",
+        "icon": "port"
     }
 ]
