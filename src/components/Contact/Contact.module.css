@@ -70,16 +70,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .c-input {
     margin: 10px auto;
     padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid var(--light-green);
 }
 
 .c-input-text {
     resize: none;
     height: 200px;
+    border-radius: 10px;
+    border: 2px solid var(--light-green);
 }
 
 .c-input, .c-input-text {
@@ -87,8 +92,7 @@
     padding: 10px 15px;
     outline: none;
     color: #fff;
-    border-radius: 10px;
-    border: 2px solid var(--light-green);
+
     background: transparent;
     font-size: 20px;
 }
@@ -112,9 +116,84 @@
 }
 
 
+/*LOADERr*/
 
+.c-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
 
+.c-loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: 11em;
+    height: 11em;
+    border-radius: 50%;
+    background: #ffffff;
+    background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .c-loader:before {
+    width: 50%;
+    height: 50%;
+    background: #ffffff;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .c-loader:after {
+    background: var(--primary-black);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
+.c-thanks {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+}
 
 
 
@@ -161,7 +240,7 @@
     }
 
     .c-form {
-        width: 95%;
+        width: 85%;
     }
 
     .c-input-text, .c-input {
@@ -173,6 +252,17 @@
         width: 100%;
         margin-top: 30px;
         margin-bottom: 50px;
+        font-size: 17px;
+    }
+
+    .c-loader-container {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    .c-thanks {
+        font-size: 30px;
+        text-align: center;
     }
 
 }

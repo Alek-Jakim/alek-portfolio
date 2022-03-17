@@ -1,4 +1,4 @@
-import { useRef, FormEvent, MutableRefObject } from "react"
+import { useRef, FormEvent, MutableRefObject, useState } from "react"
 import styles from "./Contact.module.css"
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md"
 import emailjs from '@emailjs/browser';
@@ -6,18 +6,36 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
+    const [username, setUsername] = useState<string>();
+    const [subject, setSubject] = useState<string>();
+    const [email, setEmail] = useState<string>();
+    const [message, setMessage] = useState<string>();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [success, setSuccess] = useState<string>("");
 
     const formRef: MutableRefObject<any> = useRef<any>();
 
-    function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        setIsLoading(true);
 
-        // emailjs.sendForm("service_etpq813", "template_skggm4r", formRef.current, "-34l5x0LaGFmojXq6")
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
+        let result = await emailjs.sendForm("service_etpq813", "template_skggm4r", formRef.current, "-34l5x0LaGFmojXq6");
+
+        if (result.status === 200) {
+            setTimeout(() => {
+                setSuccess("Thank you for your message!");
+                setTimeout(() => {
+                    setIsLoading(false);
+                    setMessage("");
+                    setUsername("");
+                    setEmail("");
+                    setSubject("");
+                    setMessage("");
+                }, 3000);
+            }, 3000)
+        } else {
+
+        }
     }
 
 
@@ -41,18 +59,34 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className={styles["c-right"]}>
-                <h3 className={styles["c-right-title"]}>Send me a message below!</h3>
-                <form ref={formRef} className={styles["c-form"]} onSubmit={(e) => handleSubmit(e)}>
-                    <div className={styles["c-form-wrap"]}>
-                        <input type="text" placeholder="Name" className={styles["c-input"]} name="user_name" />
-                        <input type="text" placeholder="Subject" className={styles["c-input"]} name="user_subject" />
-                        <input type="email" placeholder="Email" className={styles["c-input"]} name="user_email" />
+
+            {
+                isLoading ?
+                    <div className={styles["c-loader-container"]}>
+                        {
+                            isLoading && !success ? <div className={styles["c-loader"]}></div> :
+                                <p className={styles["c-thanks"]}>
+                                    {success}
+                                </p>
+                        }
+
                     </div>
-                    <textarea name="message" className={styles["c-input-text"]} placeholder="Message..."></textarea>
-                    <button type="submit" className={styles["c-btn"]}>SEND</button>
-                </form>
-            </div>
+                    :
+                    <div className={styles["c-right"]}>
+                        <h3 className={styles["c-right-title"]}>Send me a message below!</h3>
+                        <form ref={formRef} className={styles["c-form"]} onSubmit={(e) => handleSubmit(e)}>
+                            <div className={styles["c-form-wrap"]}>
+                                <input type="text" placeholder="Name" className={styles["c-input"]} name="user_name" onChange={(e) => setUsername(e.target.value)} />
+                                <input type="text" placeholder="Subject" className={styles["c-input"]} name="user_subject" onChange={(e) => setSubject(e.target.value)} />
+                                <input type="email" placeholder="Email" className={styles["c-input"]} name="user_email" onChange={(e) => setEmail(e.target.value)} />
+                            </div>
+                            <textarea name="message" className={styles["c-input-text"]} placeholder="Message..." onChange={(e) => setMessage(e.target.value)}></textarea>
+                            <button type="submit" className={styles["c-btn"]}>SEND</button>
+                        </form>
+                    </div>
+            }
+
+
         </div>
     )
 }
