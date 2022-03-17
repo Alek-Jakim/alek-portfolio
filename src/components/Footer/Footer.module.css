@@ -1,0 +1,64 @@
+.f {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #131b15;
+}
+
+.f-icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    cursor: pointer;
+    margin: 15px auto;
+}
+
+.f-icon {
+    font-size: 35px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+.f-icon, .f-icon-link {
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+.f-icon:hover {
+    color: #fff;
+    text-shadow: 13px 13px var(--light-green);
+}
+
+.f-links {
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.f-links:nth-child(1) {
+    border-radius: 1.5px solid rgb(209, 209, 209);
+}
+
+.f-link {
+    cursor: pointer;
+    color: rgb(209, 209, 209);
+    font-size: 23px;
+    transition: all 0.3s ease-in-out;
+    padding: 0 30px;
+}
+
+.f-link:hover {
+    color: var(--light-green);
+}
+
+.f-link-divide {
+    border-right: 1px solid rgb(219, 219, 219);
+}
+
+
+
