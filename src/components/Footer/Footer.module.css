@@ -62,3 +62,21 @@
 
 
 
+
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 480px) {
+    .f-links, .f-icons {
+        width: 100%;
+    }
+
+    .f-icon {
+        font-size: 25px;
+    }
+
+    .f-link {
+        font-size: 19px;
+    }
+}

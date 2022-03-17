@@ -5,6 +5,7 @@ import { Link } from "react-scroll"
 
 
 const Footer = () => {
+
     return (
         <footer className={styles["f"]}>
             <div className={styles["f-icons"]}>
