@@ -28,7 +28,7 @@
         "title": "Memory Game",
         "stack": "Vue.js",
         "desc": "A memory game made with Vue, some sound effects and Game of Thrones images.",
-        "projectLink": "https://app.netlify.com/sites/memory-spiel-aleksandar-jakimovski/overview",
+        "projectLink": "https://memory-spiel-aleksandar-jakimovski.netlify.app/",
         "icon": "memory"
     },
     {
