@@ -58,7 +58,7 @@ const Contact = () => {
 
 
     return (
-        <div className={styles["c"]}>
+        <div className={styles["c"]} id="contact">
             <div className={styles["c-left"]}>
                 <h3 className={styles["c-title"]}>Let's Get In Touch</h3>
                 <div className={styles["c-contact"]}>

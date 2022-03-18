@@ -1,8 +1,6 @@
 import React from "react"
 import styles from "./Intro.module.css"
 import me from "../../img/me.png"
-import { Link } from "react-scroll"
-import { BsFillArrowDownCircleFill } from "react-icons/bs"
 
 const Intro = () => {
     return (

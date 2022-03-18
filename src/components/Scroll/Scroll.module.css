@@ -1,0 +1,92 @@
+.s-intro, .s-about, .s-projects, .s-contact {
+    position: fixed;
+    width: 80px;
+    left: -100px;
+    transition: 0.4s;
+    background-color: rgb(4, 4, 4);
+    color: var(--light-green);
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    z-index: 3;
+}
+
+.s div:hover {
+    left: -5px;
+}
+
+
+.s-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.s-burger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 50px;
+    transition: 0.3s;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    color: var(--light-green);
+    z-index: 3;
+}
+
+
+/* .s-burger:hover {
+    left: 5px;
+} */
+
+.s-intro {
+    top: 40%;
+}
+.s-about {
+    top: 47%;
+}
+.s-projects {
+    top: 54%;
+}
+.s-contact {
+    top: 61%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .s-intro, .s-about, .s-projects, .s-contact {
+        font-size: 25px;
+        width: 70px;
+        margin: 0;
+    }
+
+    .s div:hover {
+        right: -10px;
+    }
+
+    .s-burger {
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+
+
+
