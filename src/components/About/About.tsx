@@ -2,8 +2,6 @@ import React from "react"
 import styles from "./About.module.css"
 import about from "../../img/about-g.jpg"
 import { SiMongodb, SiMysql, SiCss3, SiHtml5, SiNodedotjs, SiReact, SiNextdotjs, SiJavascript, SiGit } from "react-icons/si"
-import { Link } from "react-scroll"
-import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from "react-icons/bs"
 
 const About = () => {
     return (
@@ -16,7 +14,7 @@ const About = () => {
             <div className={styles["a-right"]}>
                 <div className={styles["a-right-top"]}>
                     <h2 className={styles["a-title-top"]}>About Me</h2>
-                    <p className={styles["a-desc"]}>My journey as a web developer started years 2 ago, when I decided to make a career change. I haven't looked back since then and I have worked on several personal & professional projects. My mission is to never stop learning and to expand my knowledge of already acquired.<br /><br /><span className={styles["a-ps"]}>P.S. The guitar on the left is just for show, I don't know how to play it.</span></p>
+                    <p className={styles["a-desc"]}>My journey as a web developer started years 2 ago, when I decided to make a career change. I haven't looked back since then and I have worked on several personal & professional projects. I'm particularly fond of the JavaScript ecosystem and enjoy working with modern web technologies. Learning new languages and martial arts is what I do when I'm not coding.<br /><br /><span className={styles["a-ps"]}>P.S. The guitar on the left is just for show, I don't know how to play it.</span></p>
                 </div>
                 <div className={styles["a-divide"]}>&nbsp;</div>
                 <div className={styles["a-right-bottom"]}>

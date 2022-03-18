@@ -18,7 +18,7 @@ const Footer = () => {
                 <a className={styles["f-icon-link"]} href="https://github.com/Alek-Jakim">
                     <FaGithub className={styles["f-icon"]} />
                 </a>
-                <a href="" className={styles["f-icon-link"]}>
+                <a href="https://www.xing.com/profile/Aleksandar_Jakimovski2/cv" className={styles["f-icon-link"]}>
                     <FaXing className={styles["f-icon"]} />
                 </a>
             </div>

@@ -2,14 +2,17 @@ import { useRef, FormEvent, MutableRefObject, useState } from "react"
 import styles from "./Contact.module.css"
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md"
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Contact = () => {
 
-    const [username, setUsername] = useState<string>();
-    const [subject, setSubject] = useState<string>();
-    const [email, setEmail] = useState<string>();
-    const [message, setMessage] = useState<string>();
+    const [username, setUsername] = useState<string>("");
+    const [subject, setSubject] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [success, setSuccess] = useState<string>("");
 
@@ -17,26 +20,41 @@ const Contact = () => {
 
     async function handleSubmit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        setIsLoading(true);
 
-        let result = await emailjs.sendForm("service_etpq813", "template_skggm4r", formRef.current, "-34l5x0LaGFmojXq6");
+        let values = {
+            username,
+            email,
+            subject,
+            message
+        }
 
-        if (result.status === 200) {
-            setTimeout(() => {
-                setSuccess("Thank you for your message!");
-                setTimeout(() => {
-                    setIsLoading(false);
-                    setMessage("");
-                    setUsername("");
-                    setEmail("");
-                    setSubject("");
-                    setMessage("");
-                }, 3000);
-            }, 3000)
+        let isEmpty = Object.values(values).some((value) => value === "");
+
+        if (isEmpty) {
+            toast.error("All fields must be filled out!");
+            return
         } else {
+            setIsLoading(true);
 
+            let result = await emailjs.sendForm("service_etpq813", "template_skggm4r", formRef.current, "-34l5x0LaGFmojXq6");
+            if (result.status === 200) {
+                setTimeout(() => {
+                    setSuccess("Thank you for your message!");
+                    setTimeout(() => {
+                        setIsLoading(false);
+                        setMessage("");
+                        setUsername("");
+                        setEmail("");
+                        setSubject("");
+                        setMessage("");
+                    }, 3000);
+                }, 3000)
+            }
         }
     }
+
+
+
 
 
     return (
@@ -59,7 +77,10 @@ const Contact = () => {
                 </div>
             </div>
 
+            <ToastContainer
+                hideProgressBar={true}
 
+            />
             {
                 isLoading ?
                     <div className={styles["c-loader-container"]}>
