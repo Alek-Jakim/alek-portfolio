@@ -19,23 +19,23 @@ const Scroll = () => {
         let contact: any = document.getElementById("s-contact");
 
 
-
-        let sideItem = document.querySelector(".Scroll_s__9nuif")?.children;
-        let arr: any = [].slice.call(sideItem);
-        arr.shift();
-
         if (!open) {
-            intro.style.left = "-10px";
-            about.style.left = "-10px";
-            projects.style.left = "-10px";
-            contact.style.left = "-10px";
+
+            if (intro && about && projects && contact) {
+                intro.style.left = "-10px";
+                about.style.left = "-10px";
+                projects.style.left = "-10px";
+                contact.style.left = "-10px";
+            }
             setOpen(true);
             burgerIcon.style.transform = "rotate(180deg)";
         } else {
-            intro.style.left = "-100px";
-            about.style.left = "-100px";
-            projects.style.left = "-100px";
-            contact.style.left = "-100px";
+            if (intro && about && projects && contact) {
+                intro.style.left = "-100px";
+                about.style.left = "-100px";
+                projects.style.left = "-100px";
+                contact.style.left = "-100px";
+            }
             burgerIcon.style.transform = "rotate(360deg)";
             setOpen(false);
         }
