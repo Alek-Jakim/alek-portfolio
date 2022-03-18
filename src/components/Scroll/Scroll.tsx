@@ -28,7 +28,9 @@ const Scroll = () => {
                 contact.style.left = "-10px";
             }
             setOpen(true);
-            burgerIcon.style.transform = "rotate(180deg)";
+            if (burgerIcon) {
+                burgerIcon.style.transform = "rotate(180deg)";
+            }
         } else {
             if (intro && about && projects && contact) {
                 intro.style.left = "-100px";
@@ -36,7 +38,9 @@ const Scroll = () => {
                 projects.style.left = "-100px";
                 contact.style.left = "-100px";
             }
-            burgerIcon.style.transform = "rotate(360deg)";
+            if (burgerIcon) {
+                burgerIcon.style.transform = "rotate(360deg)";
+            }
             setOpen(false);
         }
 
