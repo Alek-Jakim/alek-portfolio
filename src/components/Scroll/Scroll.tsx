@@ -11,12 +11,12 @@ const Scroll = () => {
 
     function handleSidebar() {
 
-        let burgerIcon: any = document.querySelector(".Scroll_s-burger__HChR-");
+        let burgerIcon = document.getElementById("s-burger");
 
-        let intro: any = document.getElementById("s-intro");
-        let about: any = document.getElementById("s-about");
-        let projects: any = document.getElementById("s-projects");
-        let contact: any = document.getElementById("s-contact");
+        let intro = document.getElementById("s-intro");
+        let about = document.getElementById("s-about");
+        let projects = document.getElementById("s-projects");
+        let contact = document.getElementById("s-contact");
 
 
         if (!open) {
@@ -27,10 +27,10 @@ const Scroll = () => {
                 projects.style.left = "-10px";
                 contact.style.left = "-10px";
             }
-            setOpen(true);
             if (burgerIcon) {
                 burgerIcon.style.transform = "rotate(180deg)";
             }
+            setOpen(true);
         } else {
             if (intro && about && projects && contact) {
                 intro.style.left = "-100px";
@@ -49,7 +49,7 @@ const Scroll = () => {
     return (
         <div className={styles["s"]}>
 
-            <MdDoubleArrow className={styles["s-burger"]} onClick={handleSidebar} />
+            <MdDoubleArrow className={styles["s-burger"]} onClick={handleSidebar} id="s-burger" />
 
 
 
