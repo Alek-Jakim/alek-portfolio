@@ -1,5 +1,5 @@
 import { IconType } from "react-icons"
-import { FaUserNinja, FaMusic, FaPizzaSlice, FaBrain, FaWineGlassAlt, FaUserAlt, FaAutoprefixer } from "react-icons/fa"
+import { FaUserNinja, FaMusic, FaPizzaSlice, FaBrain, FaWineGlassAlt, FaUserAlt, FaAutoprefixer, FaMoneyBillWave } from "react-icons/fa"
 
 export function generateIcon(i: string) {
     switch (i) {
@@ -15,6 +15,8 @@ export function generateIcon(i: string) {
             return <FaWineGlassAlt />
         case "port":
             return <FaUserAlt />
+        case "finance":
+            return <FaMoneyBillWave />
         default:
             return <FaAutoprefixer />
     }

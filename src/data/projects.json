@@ -46,5 +46,13 @@
         "desc": "A portfolio website to showcase a developer's skillset.",
         "projectLink": "https://aleksandar-jakimovski.netlify.app",
         "icon": "port"
+    },
+    {
+        "id": 7,
+        "title": "EdgeLedger Finances",
+        "stack": "HTML, CSS, JavaScript",
+        "desc": "A simple single-page website for financial advisors.",
+        "projectLink": "https://edgeledger-finances.netlify.app/",
+        "icon": "port"
     }
 ]
