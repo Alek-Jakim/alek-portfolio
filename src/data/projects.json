@@ -33,6 +33,14 @@
     },
     {
         "id": 5,
+        "title": "Canvas Shooter",
+        "stack": "HTML, CSS, JavaScript",
+        "desc": "A 2D Canvas game created with the Canvas API (not mobile-friendly yet)",
+        "projectLink": "https://canvas-shooter.netlify.app/",
+        "icon": "port"
+    },
+    {
+        "id": 6,
         "title": "Benuta Landing Page",
         "stack": "JavaScript, HTML, CSS",
         "desc": "A simple landing page I made for Benuta, a company that sells rugs and home accessories",
@@ -40,7 +48,7 @@
         "icon": "style"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Portfolio Website",
         "stack": "HTML, CSS, SASS, JavaScript",
         "desc": "A portfolio website to showcase a developer's skillset.",
@@ -48,7 +56,7 @@
         "icon": "port"
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "EdgeLedger Finances",
         "stack": "HTML, CSS, JavaScript",
         "desc": "A simple single-page website for financial advisors.",
